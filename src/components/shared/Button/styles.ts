@@ -1,35 +1,26 @@
 // ? Librerias
 import styled from 'styled-components/macro'
-import { ButtonProps } from './Button'
 
-const Button = styled.button<ButtonProps>`
-  ${({
-    primary: isPrimary
-  }) => {
-    const defaultStyle = `
-      display: inline-block;
-      min-width: 135px;
-      color: #8bcee8;
-      font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      line-height: 1.5;
-      font-weight: 400;
-      text-align: center;
-      vertical-align: middle;
-      text-decoration: none;
-      outline: none;
-      border: solid 1px;
-      transition: all 0.3s linear;
-      cursor: pointer;
-      
-      &:hover {
-        background: linear-gradient(to right, #8bcee8, #9ec3f8);
-      }
-    `
+export const StyledButton = styled.button`
+  display: inline-block;
+  min-width: 135px;
+  color: #8bcee8;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  border: solid 1px;
+  border-radius: 25px;
+  transition: all 0.3s linear;
+  cursor: pointer;
 
-    const styles = `
-    ${defaultStyle}
-    ${isPrimary && primary}
-    `
-
-    return styles
-  }}
+  &:hover {
+    background: linear-gradient(to right, #8bcee8, #9ec3f8);
+    color: #000;
+    border: none;
+  }
+`

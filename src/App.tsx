@@ -7,7 +7,7 @@ function App() {
     <div className='App'>
       <h1>Reto MoaDW</h1>
 
-      <Button></Button>
+      <Button>Buton</Button>
     </div>
   )
 }

@@ -6,13 +6,10 @@ import { StyledButton } from './styles'
 export type ButtonProps = {
   type?: 'button' | 'submit' | 'reset' | undefined
   children?: ReactNode | undefined
-  primary?: boolean
 }
 
-const Button = ({ type = 'button', children, ...arg }: ButtonProps) => (
-  <StyledButton type={type} {...arg}>
-    {children}
-  </StyledButton>
+const Button = ({ type = 'button', children }: ButtonProps) => (
+  <StyledButton type={type}>{children}</StyledButton>
 )
 
 export default Button

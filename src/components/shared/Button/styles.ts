@@ -20,6 +20,10 @@ const Button = styled.button<ButtonProps>`
       border: solid 1px;
       transition: all 0.3s linear;
       cursor: pointer;
+      
+      &:hover {
+        background: linear-gradient(to right, #8bcee8, #9ec3f8);
+      }
     `
 
     const styles = `

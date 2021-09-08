@@ -1,9 +1,9 @@
-// ? Librerias
+//* Libraries
 import styled from 'styled-components/macro'
 
 export const StyledButton = styled.button`
   display: inline-block;
-  min-width: 135px;
+  padding: 7px 15px;
   color: #8bcee8;
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.5;

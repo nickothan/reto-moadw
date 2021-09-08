@@ -1,8 +1,8 @@
-//? Librerias
+//* Libraries
 import { ReactNode } from 'react'
 import { StyledButton } from './styles'
 
-//? Propiedades del coponente boton
+//* Props of Button
 export type ButtonProps = {
   type?: 'button' | 'submit' | 'reset' | undefined
   children?: ReactNode | undefined

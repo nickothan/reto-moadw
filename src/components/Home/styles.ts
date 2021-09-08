@@ -24,5 +24,5 @@ export const StylesHome = styled.div`
     margin: 30px;
   }
 `
-export const StylesUser = styled.div``
+export const StylesUser = styled.li``
 export const Donation = styled.div``

@@ -27,20 +27,29 @@ export const StylesHome = styled.div`
 export const StylesUser = styled.li`
   margin: 10px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   padding: 30px 20px;
   border: 2px solid salmon;
   border-radius: 8px;
 
+  & > div {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
   h3 {
-    max-width: 200px;
+    margin-left: 20px;
     font-size: 2rem;
   }
 
   img {
     background-color: salmon;
+    min-width: 50px;
     width: 90px;
+    min-height: 50px;
     height: 90px;
     border-radius: 50%;
   }

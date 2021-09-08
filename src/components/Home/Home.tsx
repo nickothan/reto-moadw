@@ -6,13 +6,17 @@ import Select from '../shared/Select'
 
 const User = () => (
   <StylesUser>
-    <img src='' alt='Image Perfil' />
-    <h3>Lorrie Cardelosa</h3>
-    <Donation>
-      <p>TOTAL DONATION</p>
-      <span>143</span>
-    </Donation>
-    <Button>Button</Button>
+    <div>
+      <img src='' alt='Image Perfil' />
+      <h3>Lorrie Cardelosa</h3>
+    </div>
+    <div>
+      <Donation>
+        <p>TOTAL DONATION</p>
+        <span>143</span>
+      </Donation>
+      <Button>Button</Button>
+    </div>
   </StylesUser>
 )
 

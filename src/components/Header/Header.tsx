@@ -1,5 +1,11 @@
 import { StyledHeader } from './styles'
 
-const Header = () => <StyledHeader>Header</StyledHeader>
+import { ReactComponent as Logo } from '../assets/Logo.svg'
+
+const Header = () => (
+  <StyledHeader>
+    <Logo />
+  </StyledHeader>
+)
 
 export default Header

@@ -1,14 +1,13 @@
-
 import Header from './components/Header'
 
+import Home from './components/Home'
 
 function App() {
   return (
     <div className='App'>
       <Header />
-      <h1>Reto MoaDW</h1>
 
-      <Button>Buton</Button>
+      <Home />
     </div>
   )
 }

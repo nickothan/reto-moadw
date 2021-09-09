@@ -23,6 +23,22 @@ export const StylesHome = styled.div`
     justify-content: space-evenly;
     margin: 30px;
   }
+
+  @media only screen and (max-width: 992px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 576px) {
+    padding-top: 0;
+    width: 90%;
+
+    & > div:first-child {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 `
 export const StylesUser = styled.li`
   margin: 10px;
@@ -52,6 +68,27 @@ export const StylesUser = styled.li`
     min-height: 50px;
     height: 90px;
     border-radius: 50%;
+  }
+
+  @media only screen and (max-width: 576px) {
+    grid-template-columns: 1fr;
+    padding: 20px;
+
+    & > div:first-child {
+      margin-bottom: 10px;
+      padding-bottom: 15px;
+      justify-content: space-around;
+      border-bottom: 2px solid salmon;
+    }
+
+    & > div:last-child {
+      justify-content: space-between;
+    }
+
+    img {
+      width: 70px;
+      height: 70px;
+    }
   }
 `
 

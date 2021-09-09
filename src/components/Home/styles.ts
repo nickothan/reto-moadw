@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro'
+import styled, { keyframes } from 'styled-components/macro'
 
 export const StylesHome = styled.div`
   padding: 20px 0;
@@ -46,8 +46,22 @@ export const StylesUser = styled.li`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   padding: 30px 20px;
-  border: 2px solid salmon;
-  border-radius: 8px;
+  border: 1px solid;
+  border-image: 8px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    120deg,
+    #79fb00,
+    #8d01a0,
+    #031ba5,
+    #ff004c,
+    #e6036d,
+    #fb0094,
+    #ff6600,
+    #04c2e4,
+    #adad02,
+    #00c3ff
+  );
 
   & > div {
     padding: 0 10px;

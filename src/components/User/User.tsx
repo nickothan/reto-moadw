@@ -6,7 +6,9 @@ import Button from '../shared/Button'
 export default function User() {
   return (
     <UserContainer>
-      <h2>Lorrie Cardenosa</h2>
+      <h2>
+        Lorrie <br /> Cardenosa
+      </h2>
       <img src='' alt='Perfil image' />
       <p>Yogt-Koyanagi sindrome, unspecified ere</p>
       <Donations>

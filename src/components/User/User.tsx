@@ -2,6 +2,8 @@
 import { UserContainer, Donations } from './styles'
 //*components
 import Button from '../shared/Button'
+//* Hooks
+import useUser, { UserType } from './useUser'
 
 export default function User() {
   return (

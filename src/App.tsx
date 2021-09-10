@@ -1,7 +1,9 @@
+//* components
+import Header from './components/Header'
 function App() {
   return (
     <div className='App'>
-      <h1>Reto MoaDW</h1>
+      <Header />
     </div>
   )
 }

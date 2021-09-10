@@ -1,9 +1,15 @@
 import styled from 'styled-components/macro'
 
 export const StyledHeader = styled.header`
-  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
-  padding: 20px 0;
+  padding: 30px 0 20px 0;
   width: 60%;
   border-bottom: 2px solid red;
+  background-color: transparent;
+`
+export const ContainerButton = styled.div`
+  position: absolute;
 `

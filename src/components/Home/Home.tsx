@@ -1,40 +1,25 @@
-//* libraries
-import { useEffect, useState } from 'react'
-
+//* Styles
 import { StylesHome, StylesUser, Donation } from './styles'
-
+//* Components
 import Button from '../shared/Button'
 import Select from '../shared/Select'
+//* Hooks
+import useHome, { UserType } from './useHome'
 
-const API_URL =
-  'https://moadw-challenge.herokuapp.com/api/find-many?skip=0&limit=3&sort=0'
-
-const User = () => {
-  const [totalReactPackages, setTotalReactPackages] = useState(null)
-
-  useEffect(() => {
-    // GET reques tusing fetch inside useEffect React hook
-    fetch(API_URL)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(':: data : ', data)
-        setTotalReactPackages(data.total)
-      })
-
-    // empty dependency array means this effect will only run once (like componentDidMount in classes)
-  }, [])
-
+const User = (user: UserType) => {
+  const { first_name, image, last_name, total } = user
   return (
     <StylesUser>
-      {console.log(':: Data : ', totalReactPackages)}
       <div>
-        <img src='' alt='Perfil' />
-        <h3>Lorrie Cardelosa</h3>
+        <img src={image} alt='Perfil' />
+        <h3>
+          {first_name} {last_name}
+        </h3>
       </div>
       <div>
         <Donation>
           <p>TOTAL DONATION</p>
-          <span>143</span>
+          <span>{total}</span>
         </Donation>
         <Button>Button</Button>
       </div>
@@ -43,17 +28,15 @@ const User = () => {
 }
 
 export default function Home() {
+  const { data } = useHome()
+
   return (
     <StylesHome>
       <div>
         <h1>Donations</h1>
         <Select />
       </div>
-      <ul>
-        <User />
-        <User />
-        <User />
-      </ul>
+      <ul>{data && data.map((user) => <User key={user.id} {...user} />)}</ul>
       <div>
         <Button>Prev</Button>
         <Button>Next</Button>

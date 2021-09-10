@@ -1,7 +1,7 @@
 import { StyledSelect } from './styles'
 
 const Select = () => (
-  <StyledSelect>
+  <StyledSelect defaultValue=''>
     <option value='value1' selected>
       Donations
     </option>

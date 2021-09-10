@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
 
 export const StyledHeader = styled.header`
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,4 +13,5 @@ export const StyledHeader = styled.header`
 `
 export const ContainerButton = styled.div`
   position: absolute;
+
 `

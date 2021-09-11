@@ -1,17 +1,17 @@
 //* Styles
-import { StylesHome, StylesUser, Donation } from './styles'
+import { StylesHome, StylesUser, Donation } from "./styles"
 //* Components
-import Button from '../shared/Button'
-import Select from '../shared/Select'
+import Button from "../../shared/Button"
+import Select from "../../shared/Select"
 //* Hooks
-import useHome, { UserType } from './useHome'
+import useHome, { UserType } from "./useHome"
 
 const User = (user: UserType) => {
   const { first_name, image, last_name, total } = user
   return (
     <StylesUser>
       <div>
-        <img src={image} alt='Perfil' />
+        <img src={image} alt="Perfil" />
         <h3>
           {first_name} {last_name}
         </h3>

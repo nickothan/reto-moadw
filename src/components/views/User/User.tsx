@@ -1,9 +1,7 @@
 //* styles
-import { UserContainer, Donations } from './styles'
+import { UserContainer, Donations } from "./styles"
 //*components
-import Button from '../shared/Button'
-//* Hooks
-import useUser, { UserType } from './useUser'
+import Button from "../../shared/Button"
 
 export default function User() {
   return (
@@ -11,7 +9,7 @@ export default function User() {
       <h2>
         Lorrie <br /> Cardenosa
       </h2>
-      <img src='' alt='Perfil image' />
+      <img src="" alt="Perfil" />
       <p>Yogt-Koyanagi sindrome, unspecified ere</p>
       <Donations>
         <div>

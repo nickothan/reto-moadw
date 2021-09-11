@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components/macro'
+import styled from "styled-components/macro"
 
 export const StylesHome = styled.div`
   padding: 20px 0;

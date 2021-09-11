@@ -1,6 +1,6 @@
 //* Librerias
 
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -16,18 +16,17 @@ const GlobalStyle = createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    background-color: black;
+
+    color: white;
+    min-height: 100vh;
   }
 
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
-
-  .App {
-    background-color: #000;
-    min-height: 100vh;
-  }
-
 `
 
 export default GlobalStyle

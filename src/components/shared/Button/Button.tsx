@@ -1,16 +1,16 @@
+import React from "react"
+// styles
+import { ButtonWrapper } from "./styles"
 
-import { ReactNode } from 'react'
-import { StyledButton } from './styles'
-
-//* Props of Button
-
-export type ButtonProps = {
-  type?: 'button' | 'submit' | 'reset' | undefined
-  children?: ReactNode | undefined
+type ButtonProps = {
+  children: React.ReactNode
+  type?: "button" | "submit" | "reset"
 }
 
-const Button = ({ type = 'button', children }: ButtonProps) => (
-  <StyledButton type={type}>{children}</StyledButton>
+const Button: React.FC<ButtonProps> = ({ children, ...args }) => (
+  <ButtonWrapper type={args.type || "button"} {...args}>
+    <div>{children}</div>
+  </ButtonWrapper>
 )
 
 export default Button

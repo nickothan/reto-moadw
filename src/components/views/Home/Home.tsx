@@ -1,46 +1,39 @@
-//* Styles
-import { StylesHome, StylesUser, Donation } from "./styles"
-//* Components
-import Button from "../../shared/Button"
-import Select from "../../shared/Select"
-//* Hooks
-import useHome, { UserType } from "./useHome"
+// img
+import Header from "components/shared/Header"
+// components
+import User from "./components/User"
+import Button from "components/shared/Button"
+import Select from "components/shared/Select"
+// styles
+import { WrapperHeader, WrapperUsers, WrapperButtons } from "./styles"
+// hooks
+import useHome from "./useHome"
 
-const User = (user: UserType) => {
-  const { first_name, image, last_name, total } = user
-  return (
-    <StylesUser>
-      <div>
-        <img src={image} alt="Perfil" />
-        <h3>
-          {first_name} {last_name}
-        </h3>
-      </div>
-      <div>
-        <Donation>
-          <p>TOTAL DONATION</p>
-          <span>{total}</span>
-        </Donation>
-        <Button>Button</Button>
-      </div>
-    </StylesUser>
-  )
-}
-
-export default function Home() {
+const Home = () => {
   const { data } = useHome()
 
   return (
-    <StylesHome>
+    <div>
+      <Header />
       <div>
-        <h1>Donations</h1>
-        <Select />
+        <WrapperHeader>
+          <h1>Donations</h1>
+          <Select />
+        </WrapperHeader>
+
+        <WrapperUsers>
+          {data?.map((user) => (
+            <User key={user.id} {...user} />
+          ))}
+        </WrapperUsers>
+
+        <WrapperButtons>
+          <Button>prev</Button>
+          <Button>next</Button>
+        </WrapperButtons>
       </div>
-      <ul>{data && data.map((user) => <User key={user.id} {...user} />)}</ul>
-      <div>
-        <Button>Prev</Button>
-        <Button>Next</Button>
-      </div>
-    </StylesHome>
+    </div>
   )
 }
+
+export default Home

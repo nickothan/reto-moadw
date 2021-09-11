@@ -1,26 +1,49 @@
-//* Libraries
-import styled from 'styled-components/macro'
+import styled from "styled-components/macro"
 
-export const StyledButton = styled.button`
-  display: inline-block;
-  padding: 7px 15px;
-  color: #8bcee8;
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 600;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  background-color: transparent;
-  outline: none;
-  border: solid 1px;
-  border-radius: 25px;
-  transition: all 0.3s linear;
+export const Wrapper = styled.div``
+
+export const ButtonWrapper = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 133px;
+  min-height: 36px;
+
+  position: relative;
+  background: black;
+  background-clip: padding-box;
+  border: solid 1px transparent;
+  border-radius: 15px;
+
   cursor: pointer;
 
-  &:hover {
-    background: linear-gradient(to right, #8bcee8, #9ec3f8);
-    color: #000;
-    border: none;
+  > div {
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(to right, #74ede6, #9fc3f9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -1px;
+    border-radius: inherit;
+    background: linear-gradient(to right, #74ede6, #9fc3f9);
+  }
+
+  img {
+    max-width: 119px;
+    max-height: 119px;
+    border-radius: 50%;
+    overflow: hidden;
   }
 `

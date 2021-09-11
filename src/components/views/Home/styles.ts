@@ -1,118 +1,33 @@
 import styled from "styled-components/macro"
 
-export const StylesHome = styled.div`
-  padding: 20px 0;
-  margin: auto;
-  width: 65%;
-  height: 100%;
-  color: white;
+export const Wrapper = styled.div``
+
+export const WrapperHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   h1 {
-    font-size: 3rem;
-  }
+    font-weight: Bold;
+    font-size: 70px;
 
-  & > div:first-child {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px 20px;
-  }
-
-  & > div:last-child {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 30px;
-  }
-
-  @media only screen and (max-width: 992px) {
-    width: 80%;
-  }
-  @media only screen and (max-width: 768px) {
-    width: 90%;
-  }
-  @media only screen and (max-width: 576px) {
-    padding-top: 0;
-    width: 90%;
-
-    & > div:first-child {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-`
-export const StylesUser = styled.li`
-  margin: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  padding: 30px 20px;
-  border: 1px solid;
-  border-image: 8px;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(
-    120deg,
-    #79fb00,
-    #8d01a0,
-    #031ba5,
-    #ff004c,
-    #e6036d,
-    #fb0094,
-    #ff6600,
-    #04c2e4,
-    #adad02,
-    #00c3ff
-  );
-
-  & > div {
-    padding: 0 10px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  h3 {
-    margin-left: 20px;
-    font-size: 2rem;
-  }
-
-  img {
-    background-color: salmon;
-    min-width: 50px;
-    width: 90px;
-    min-height: 50px;
-    height: 90px;
-    border-radius: 50%;
-  }
-
-  @media only screen and (max-width: 576px) {
-    grid-template-columns: 1fr;
-    padding: 20px;
-
-    & > div:first-child {
-      margin-bottom: 10px;
-      padding-bottom: 15px;
-      justify-content: space-around;
-      border-bottom: 2px solid salmon;
-    }
-
-    & > div:last-child {
-      justify-content: space-between;
-    }
-
-    img {
-      width: 70px;
-      height: 70px;
-    }
+    background: linear-gradient(to right, #74ede6, #9fc3f9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 `
 
-export const Donation = styled.div`
-  p {
-    font-weight: 600;
-  }
+export const WrapperUsers = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-bottom: 36px;
+`
 
-  span {
-    font-size: 1.9rem;
-    font-weight: 700;
-  }
+export const WrapperButtons = styled.div`
+  display: flex;
+  justify-content: center;
+  column-gap: 16px;
+  margin-bottom: 36px;
 `

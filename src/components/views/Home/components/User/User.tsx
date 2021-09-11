@@ -1,3 +1,4 @@
+import { useHistory } from "react-router-dom"
 // styles
 import {
   WrapperUserBox,
@@ -15,7 +16,12 @@ const Src =
   "https://admin.freetour.com/images/tours/10180/free-nice-guided-tour-in-spanish-01.jpg"
 
 const User: React.FC<UserType> = (user) => {
-  const { first_name, last_name, image, total } = user
+  let history = useHistory()
+  const { id, first_name, last_name, image, total } = user
+
+  const handleClick = (id: number) => {
+    history.push(`/profile/${id}`)
+  }
 
   return (
     <WrapperUserBox>
@@ -27,7 +33,7 @@ const User: React.FC<UserType> = (user) => {
         <DonationText>Total Donations</DonationText>
         <DonationNumber>{total}</DonationNumber>
       </div>
-      <Button>
+      <Button onClick={() => handleClick(id)}>
         <BackIcon />
       </Button>
     </WrapperUserBox>

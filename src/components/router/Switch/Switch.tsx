@@ -2,7 +2,7 @@ import React from "react"
 import { Switch as SwitchRouter, Route } from "react-router-dom"
 // components
 import Home from "components/views/Home"
-import Profile from "components/views/User"
+import Profile from "components/views/Profile"
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -26,7 +26,7 @@ const Switch = () => (
     <Route exact path="/">
       <Home />
     </Route>
-    <Route path="/about">
+    <Route path={`/profile/:id`}>
       <Profile />
     </Route>
   </SwitchRouter>

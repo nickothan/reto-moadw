@@ -7,6 +7,8 @@ export const ButtonWrapper = styled.button`
   justify-content: center;
   align-items: center;
 
+  padding: 0 40px;
+
   min-width: 133px;
   min-height: 36px;
 
@@ -17,6 +19,7 @@ export const ButtonWrapper = styled.button`
   border-radius: 15px;
 
   cursor: pointer;
+  transition: all 5s linear;
 
   > div {
     font-size: 18px;
